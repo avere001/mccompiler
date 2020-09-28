@@ -4,3 +4,6 @@ def something(a, b, c)
 }
 
 # The body of the function is below 
+while( a < b ){
+ x = 3 
+}
