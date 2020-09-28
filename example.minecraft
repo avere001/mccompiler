@@ -1,0 +1,6 @@
+def something(a, b, c)
+{
+ x = 2
+}
+
+# The body of the function is below 
