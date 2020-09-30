@@ -73,12 +73,14 @@ def parse(source):
     print(tree)
     return tree
 
-source = "example.minecraft"
-target = "example.mcasm"
-assembly = compile(parse(source))
-print(assembly)
-with open(target, 'w') as filehandle:
-    for line in assembly:
-        filehandle.write('{}\n'.format(line))
+
+if __name__ == '__main__':
+    source = "example.minecraft"
+    target = "example.mcasm"
+    assembly = compile(parse(source))
+    print(assembly)
+    with open(target, 'w') as filehandle:
+        for line in assembly:
+            filehandle.write('{}\n'.format(line))
 
 
