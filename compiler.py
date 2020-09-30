@@ -16,9 +16,9 @@ def const_assign(var, val):
 
 def compare(a, op, b, cond_var):
    namespace="vars"
-   default_false = [ "U scoreboard players set {} vars 0" ].format(cond_var)
-   case_true = [ "U execute if score {} vars {} {} vars run scoreboard players set {} vars 1 ".format(a,op,b, cond_var) ]   
-   return default_false + case_true 
+   default_false = [ f"U scoreboard players set {cond_var} vars 0" ]
+   case_true = [ "U execute if score {} vars {} {} vars run scoreboard players set {} vars 1 ".format(a,op,b, cond_var) ]
+   return default_false + case_true
 
 def compile(tree):
    
