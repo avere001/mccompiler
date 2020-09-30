@@ -1,4 +1,6 @@
 from lark import Lark, Transformer
+from lark.lexer import Token
+
 from assembler import assemble
 
         
@@ -21,9 +23,8 @@ def compare(a, op, b, cond_var):
    return default_false + case_true
 
 def compile(tree):
-   
-   #If we hit a base token 
-   if str(type(tree)) == "<class 'lark.lexer.Token'>":
+
+   if isinstance(tree, Token):
        return [str(tree)]
 
    if tree.data == "program":
