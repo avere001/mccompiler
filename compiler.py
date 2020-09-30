@@ -75,7 +75,7 @@ def parse(source):
     return tree
 
 
-if __name__ == '__main__':
+def main():
     source = "example.minecraft"
     target = "example.mcasm"
     assembly = compile(parse(source))
@@ -83,3 +83,7 @@ if __name__ == '__main__':
     with open(target, 'w') as filehandle:
         for line in assembly:
             filehandle.write('{}\n'.format(line))
+
+
+if __name__ == '__main__':
+    main()
