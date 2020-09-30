@@ -50,10 +50,11 @@ def compile(tree):
        a, op, b = condition.children
        cond_var = "WHILE_VAR_{}".format(str(a.line))
        compare_asm = compare( a, op, b, cond_var)
-       jmp = # TODO implement jump, create assembly for it
-       return compare_asm + ["U execute if score {} vars matches 1 run {}".format(cond_var, jmp) ]
-       
-    
+       # jmp = # TODO implement jump, create assembly for it
+       # return compare_asm + ["U execute if score {} vars matches 1 run {}".format(cond_var, jmp) ]
+       return []
+
+
    if tree.data == "value":
        return compile(tree.children[0])
 
